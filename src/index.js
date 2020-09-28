@@ -1,12 +1,5 @@
+const isValid = arr => arr && arr.length
 
-exports.min = function min (array) {
-  return 0;
-}
-
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.min = arr => isValid(arr) ? Math.min.apply(null, arr) : 0
+exports.max = arr => isValid(arr) ? Math.max.apply(null, arr) : 0
+exports.avg = arr => isValid(arr) ? arr.reduce((a, b) => a + b) / arr.length : 0
